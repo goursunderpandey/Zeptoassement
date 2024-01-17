@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import JohnImage from "./John.png";
+import items  from "../component/data";
 
 const ChipInput = () => {
   const [inputValue, setInputValue] = useState("");
@@ -7,33 +7,6 @@ const ChipInput = () => {
   const [filteredItems, setFilteredItems] = useState([]);
   const inputRef = useRef(null);
 
-  const items = [
-    {
-      username: "John Doe",
-      email: "john.doe@example.com",
-      profilePic: JohnImage,
-    },
-    {
-      username: "Jane Smith",
-      email: "jane.smith@example.com",
-      profilePic: JohnImage,
-    },
-    {
-      username: "Bob Johnson",
-      email: "bob.johnson@example.com",
-      profilePic: JohnImage,
-    },
-    {
-      username: "Alice Brown",
-      email: "alice.brown@example.com",
-      profilePic: JohnImage,
-    },
-    {
-      username: "Nick Giannopoulos",
-      email: "nick.g@example.com",
-      profilePic: JohnImage,
-    },
-  ];
 
   const handleInputChange = (e) => {
     const value = e.target.value;
@@ -116,7 +89,6 @@ const ChipInput = () => {
           onChange={handleInputChange}
           onKeyDown={handleInputKeyDown}
           placeholder=" Add new user"
-          className="flex-1 border-none focus:outline-none px-2"
         />
       </div>
       <ul className="list-none p-0 m-0">
